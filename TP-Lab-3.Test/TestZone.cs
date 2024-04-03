@@ -6,8 +6,6 @@ namespace TP_Lab_3.Test
         private College_System students = new College_System();
 
 
-
-
         [Fact]
         public void Student_load_test()
         {
