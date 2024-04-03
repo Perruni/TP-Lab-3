@@ -18,5 +18,9 @@ namespace TP_Lab_3
             BirthDate = birthDate;
 
         }
+
+        public Student()
+        {
+        }
     }
 }
