@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP-Lab-3", "TP-Lab-3\TP-Lab-3.csproj", "{E0786B1D-C787-4E74-B2EA-6D0A5702E99D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP-Lab-3.Test", "TP-Lab-3.Test\TP-Lab-3.Test.csproj", "{57BC07BD-B16B-4FF0-BCF9-001EA381C0B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0786B1D-C787-4E74-B2EA-6D0A5702E99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0786B1D-C787-4E74-B2EA-6D0A5702E99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0786B1D-C787-4E74-B2EA-6D0A5702E99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0786B1D-C787-4E74-B2EA-6D0A5702E99D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BC07BD-B16B-4FF0-BCF9-001EA381C0B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BC07BD-B16B-4FF0-BCF9-001EA381C0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BC07BD-B16B-4FF0-BCF9-001EA381C0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BC07BD-B16B-4FF0-BCF9-001EA381C0B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {391B38CB-C21D-4DB4-8BE2-CC3C371A3127}
+	EndGlobalSection
+EndGlobal
