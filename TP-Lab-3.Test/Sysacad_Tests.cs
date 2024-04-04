@@ -8,7 +8,7 @@ namespace TP_Lab_3.Test
 {
     public class Sysacad_Tests
     {
-        private readonly College_System sysacad;
+        private College_System sysacad;
         public Sysacad_Tests()
         {
             sysacad = new College_System();
