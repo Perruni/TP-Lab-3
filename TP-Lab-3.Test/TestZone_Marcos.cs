@@ -1,11 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace TP_Lab_3.Test
 {
-    public class TestZone
+    public class TestZone_Marcos
     {
+
         private int legacyCounter = 2000;
         private College_System students = new College_System();
 
-        public TestZone()
+        public TestZone_Marcos()
         {
             for (int i = 0; i < 100; i++)
             {
@@ -42,7 +49,7 @@ namespace TP_Lab_3.Test
 
         [Fact]
         public void Student_load_test()
-        {      
+        {
 
             var aux = students[2050];
 

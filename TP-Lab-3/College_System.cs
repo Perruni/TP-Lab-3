@@ -13,6 +13,7 @@ namespace TP_Lab_3
         {
             return student.Legacy;
         }
-
+        
     }
-}
+ }
+
