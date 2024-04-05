@@ -23,16 +23,29 @@ namespace TP_Lab_3.Test
         }
 
         [Fact]
-        public void TestZone_Juanma_sysacad_add()
+        public void TestZone_Juanma_sysacad_addStudent()
         {
             //crea un estudiante
             var std = new Student(25000, "Juan", "Malveira", new DateTime(2002, 1, 18));
             //Inserta en el Collection
-            _sysacad.Insert(4, std);
+            _sysacad.Insert(2, std);
             //Lo inserta?
             Assert.True(_sysacad.Contains(25000));
             //Reemplaza el anterior o solo lo incrusta en esa posicion?
             Assert.Equal(1001, _sysacad.Count);
+            //  .Insert() incrusta el item y actualiza el indice del resto
+        }
+
+        [Fact]
+        public void TestZone_JuanMa_sysacad_Clear()
+        {
+            //Llamada al método que limpia la collection
+            _sysacad.Clear();
+
+            //El metodo no vuelve null la collection, porque ya esta creada
+            Assert.False(_sysacad == null);
+            //Si vacia de elementos la misma
+            Assert.True(_sysacad.Count()==0);
         }
     }
 }
