@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,26 @@ namespace TP_Lab_3.Test
             }
         }
 
+        public class College_System : KeyedCollection<int, Student>
+        {
+            protected override int GetKeyForItem(Student student)
+            {
+                return student.Legacy;
+            }
+
+            public void ReplaceStudent(Student student)
+            {
+                
+                if (Contains(student.Legacy))
+                {
+
+                    int index = IndexOf(this[student.Legacy]);
+
+                    base.SetItem(index, student);
+                }
+            }
+        }
+
         [Fact]
         public void Student_load_test()
         {
@@ -67,7 +88,7 @@ namespace TP_Lab_3.Test
 
 
             Assert.Equal("Jhon", aux.FirstName);
-            
+
             var newStudent = students[200005];
 
             if (newStudent != null)
@@ -93,10 +114,14 @@ namespace TP_Lab_3.Test
 
         [Fact]
         public void SetItem_for_student_remplace_test()
-        {
-            var newStudent = new Student(2500000, "Carlos", "Santana", new DateTime(1990,07,23));
+        {        
 
-            //students[2500000] = newStudent;
+            Assert.Equal("Jhon", students[34500].FirstName);
+
+            students.ReplaceStudent(new Student(34500, "Carlos", "Santana", new DateTime(1990, 07, 23)));
+
+            Assert.Equal("Carlos", students[34500].FirstName);
+
         }
     }
 }
