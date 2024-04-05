@@ -29,6 +29,16 @@ namespace TP_Lab_3.Test
             sysacad.RemoveAt(500);
             Assert.False(sysacad.Contains(23500));
         }
+
+        [Fact]
+        public void InsertItem_Test()
+        {
+            //Assert.False(sysacad.Contains(23400));
+
+            sysacad.InsertItem(500, new Student(23400, "Nuevo", "Estudiante", new DateTime(2003, 5, 10)));
+
+            Assert.True(sysacad.Contains(23400));
+        }
     }
 }
    
