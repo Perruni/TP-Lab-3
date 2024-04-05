@@ -39,13 +39,23 @@ namespace TP_Lab_3.Test
         [Fact]
         public void TestZone_JuanMa_sysacad_Clear()
         {
-            //Llamada al método que limpia la collection
+            //Llamada al método que limpia la collection existente
             _sysacad.Clear();
 
-            //El metodo no vuelve null la collection, porque ya esta creada
+            //Creamos una nueva KeyedCollection
+            College_System _emptySysacad = new();
+            //Llamada al método clear desde la collection nueva
+            _emptySysacad.Clear();
+
+            //El metodo no vuelve null las collection, porque ya estan creadas
             Assert.False(_sysacad == null);
-            //Si vacia de elementos la misma
+            Assert.False(_emptySysacad == null);
+
+            //Si vacia de elementos la Collection cargada
             Assert.True(_sysacad.Count()==0);
+            
+            //Para una Collection vacía no tiene conflictos
+            Assert.True(_emptySysacad.Count() == 0);
         }
     }
 }
