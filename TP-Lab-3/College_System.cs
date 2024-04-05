@@ -9,9 +9,9 @@ namespace TP_Lab_3
 {
     public class College_System : KeyedCollection<int, Student>
     {
-        public void InsertItem(int v, Student student)
+        public void Insert_student(int index, Student sysacad)
         {
-            throw new NotImplementedException();
+            base.InsertItem(index, sysacad);
         }
 
         protected override int GetKeyForItem(Student student)
