@@ -63,6 +63,11 @@ namespace TP_Lab_3.Test
         public void Update_or_remplace_Student_Info()
         {
 
+            var aux = students[200005];
+
+
+            Assert.Equal("Jhon", aux.FirstName);
+            
             var newStudent = students[200005];
 
             if (newStudent != null)
@@ -72,7 +77,9 @@ namespace TP_Lab_3.Test
                 newStudent.BirthDate = new DateTime(2001, 01, 1);
             }
 
-            
+            Assert.Equal("Pedro", aux.FirstName);
+
+
         }
         [Fact]
         public void Remove_student_test()
@@ -82,6 +89,14 @@ namespace TP_Lab_3.Test
             students.Remove(200005);
 
             Assert.False(students.Contains(200005));
+        }
+
+        [Fact]
+        public void SetItem_for_student_remplace_test()
+        {
+            var newStudent = new Student(2500000, "Carlos", "Santana", new DateTime(1990,07,23));
+
+            //students[2500000] = newStudent;
         }
     }
 }
