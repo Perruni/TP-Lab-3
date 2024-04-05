@@ -48,26 +48,6 @@ namespace TP_Lab_3.Test
             }
         }
 
-        public class College_System : KeyedCollection<int, Student>
-        {
-            protected override int GetKeyForItem(Student student)
-            {
-                return student.Legacy;
-            }
-
-            public void ReplaceStudent(Student student)
-            {
-                
-                if (Contains(student.Legacy))
-                {
-
-                    int index = IndexOf(this[student.Legacy]);
-
-                    base.SetItem(index, student);
-                }
-            }
-        }
-
         [Fact]
         public void Student_load_test()
         {

@@ -17,6 +17,18 @@ namespace TP_Lab_3
             return student.Legacy;
         }
 
+        public void ReplaceStudent(Student student)
+        {
+
+            if (Contains(student.Legacy))
+            {
+
+                int index = IndexOf(this[student.Legacy]);
+
+                base.SetItem(index, student);
+            }
+        }
+
     }
 }
 
