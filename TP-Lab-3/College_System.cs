@@ -17,16 +17,17 @@ namespace TP_Lab_3
             return student.Legacy;
         }
 
+        //Funcion encarga del reemplazo de un estudiante, esta funcion recibe el estudiante nuevo
         public void ReplaceStudent(Student student)
         {
+            //Uso de IndexOf para conseguir el indice del estudiante que se va a reemplazar
+            int index = IndexOf(this[student.Legacy]);
 
-            if (Contains(student.Legacy))
-            {
-
-                int index = IndexOf(this[student.Legacy]);
-
-                base.SetItem(index, student);
-            }
+            //Llamado a la base de SetItem que se encargara del reemplazo
+            //En caso de no existir el estudiante lo agregara
+            base.SetItem(index, student);            
+                
+         
         }
 
     }
