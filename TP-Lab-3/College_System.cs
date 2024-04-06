@@ -25,8 +25,7 @@ namespace TP_Lab_3
 
             //Llamado a la base de SetItem que se encargara del reemplazo
             //En caso de no existir el estudiante lo agregara
-            base.SetItem(index, student);            
-                
+            base.SetItem(index, student);         
          
         }
 
