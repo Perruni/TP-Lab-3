@@ -29,7 +29,7 @@ namespace TP_Lab_3.Test
             Assert.True(sysacad.Contains(23500));
             // Luego se elimina un estudiante de la posición 500
             sysacad.RemoveAt(500);
-            // Finalmente se verificar que el estudiante con el número de legajo 23500
+            // Finalmente se verifica que el estudiante con el número de legajo 23500
             // ya no se encuentre después de la eliminación
             Assert.False(sysacad.Contains(23500));
 
@@ -50,16 +50,16 @@ namespace TP_Lab_3.Test
         [Fact]
         public void Remove_and_Insert_Test()
         {
-            //Se verifica si el sistema contiene un estudiante con el número de legajo 23500
+            // Se verifica si el sistema contiene un estudiante con el número de legajo 23500
             Assert.True(sysacad.Contains(23500));
             // Se elimina a un estudiante de la posición 500
             sysacad.RemoveAt(500);
-            // Se verificar que el estudiante con el número de legajo 23500
+            // Se verifica que el estudiante con el número de legajo 23500
             // ya no se encuentre después de la eliminación
             Assert.False(sysacad.Contains(23500));
             // Se inserta un nuevo estudiante con el número de legajo 23500 en la posición 500
             sysacad.Insert_student(500, new Student(23500, "Nuevo", "Estudiante", new DateTime(2003, 5, 10)));
-            // Finalmente se comprobar que el estudiante con el número de legajo 23500
+            // Finalmente se comprueba que el estudiante con el número de legajo 23500
             // esté presente después de la inserción
             Assert.True(sysacad.Contains(23500));
 
