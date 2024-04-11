@@ -143,8 +143,8 @@ namespace TP_Lab_3.Test
 
             //Se cargan de nuevo los datos para verificación
             aux = students[20500];
-            BirthCheck = aux.BirthDate;
-            
+            BirthCheck = aux.BirthDate;            
+
             //Verificación de datos despues del reemplazo
             Assert.Equal("Carlos", aux.FirstName);
             Assert.Equal("Santana", aux.LastName);
