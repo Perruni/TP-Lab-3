@@ -141,14 +141,10 @@ namespace TP_Lab_3.Test
             //reemplazar a otro
             students.ReplaceStudent(new Student(20500, "Carlos", "Santana", new DateTime(1990, 07, 23)));
 
-            //Actualización de variables para la comparación
-            aux = students[34500];
-            BirthCheck = aux.BirthDate;
-
             //Se cargan de nuevo los datos para verificación
             aux = students[20500];
             BirthCheck = aux.BirthDate;
-
+            
             //Verificación de datos despues del reemplazo
             Assert.Equal("Carlos", aux.FirstName);
             Assert.Equal("Santana", aux.LastName);
