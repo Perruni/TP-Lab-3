@@ -54,7 +54,7 @@ namespace TP_Lab_3.Test
         }
 
         //Test de carga de estudiantes
-        //Se cargan 2.000.000 de estudiantes
+        //Se cargan 2.000 de estudiantes
         [Fact]
         public void Student_load_test()
         {
@@ -64,7 +64,7 @@ namespace TP_Lab_3.Test
             //Variable para comprobar cumpleaños
             DateTime BirthCheck = aux.BirthDate;
 
-            //Verificación que se cargaron los 2.000.000 de estudiantes
+            //Verificación que se cargaron los 2.000 de estudiantes
             Assert.Equal(2000, students.Count());                  
 
             //Comprobación que el legajo corresponda al estudiante
@@ -141,6 +141,10 @@ namespace TP_Lab_3.Test
             //reemplazar a otro
             students.ReplaceStudent(new Student(20500, "Carlos", "Santana", new DateTime(1990, 07, 23)));
 
+            //Se cargan de nuevo los datos para verificación
+            aux = students[20500];
+            BirthCheck = aux.BirthDate;
+            
             //Verificación de datos despues del reemplazo
             Assert.Equal("Jhon", aux.FirstName);
             Assert.Equal("Doe", aux.LastName);
