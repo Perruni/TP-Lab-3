@@ -59,7 +59,7 @@ namespace TP_Lab_3.Test
         public void Student_load_test()
         {
             //Almacenamiento de un estudiante de ejemplo
-            var aux = students[34500];
+            var aux = students[20500];
 
             //Variable para comprobar cumpleaños
             DateTime BirthCheck = aux.BirthDate;
@@ -68,7 +68,7 @@ namespace TP_Lab_3.Test
             Assert.Equal(2000, students.Count());                  
 
             //Comprobación que el legajo corresponda al estudiante
-            Assert.Equal(34500, aux.Legacy);
+            Assert.Equal(20500, aux.Legacy);
 
             //Comprobación de datos del estudiante
             Assert.Equal("Jhon", aux.FirstName);
@@ -126,7 +126,7 @@ namespace TP_Lab_3.Test
         public void SetItem_for_student_remplace_test()
         {
             //Carga de un estudiante x en una variable auxiliar
-            var aux = students[34500];
+            var aux = students[20500];
 
             //Variable para comprobar cumpleaños
             DateTime BirthCheck = aux.BirthDate;
@@ -139,7 +139,7 @@ namespace TP_Lab_3.Test
             //Llamada a la funcion para el reemplazo
             //Se pasa los datos de un nuevo estudiante para
             //reemplazar a otro
-            students.ReplaceStudent(new Student(34500, "Carlos", "Santana", new DateTime(1990, 07, 23)));
+            students.ReplaceStudent(new Student(20500, "Carlos", "Santana", new DateTime(1990, 07, 23)));
 
             //Verificación de datos despues del reemplazo
             Assert.Equal("Jhon", aux.FirstName);
