@@ -146,8 +146,8 @@ namespace TP_Lab_3.Test
             BirthCheck = aux.BirthDate;
             
             //Verificación de datos despues del reemplazo
-            Assert.Equal("Jhon", aux.FirstName);
-            Assert.Equal("Doe", aux.LastName);
+            Assert.Equal("Carlos", aux.FirstName);
+            Assert.Equal("Santana", aux.LastName);
             Assert.Equal(BirthCheck, aux.BirthDate);
 
         }
