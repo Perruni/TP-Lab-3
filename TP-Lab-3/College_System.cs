@@ -11,12 +11,17 @@ namespace TP_Lab_3
 {
     public class College_System : KeyedCollection<int, Student>
     {
-        
         protected override int GetKeyForItem(Student student)
         {
             return student.Legacy;
         }
-
+        
+        // Funcion que toma el indice del College_System y lo inserta en un indice especifico 
+        public void Insert_student(int index, Student sysacad)
+        {
+            base.InsertItem(index, sysacad);
+        }
+        
         //Funcion encarga del reemplazo de un estudiante, esta funcion recibe el estudiante nuevo
         public void ReplaceStudent(Student student)
         {
