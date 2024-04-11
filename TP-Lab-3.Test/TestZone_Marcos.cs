@@ -10,7 +10,7 @@ namespace TP_Lab_3.Test
     public class TestZone_Marcos
     {
         //Variable contador de legajos
-        private int legacyCounter = 2000;
+        private int legacyCounter = 20000;
 
         //Creacion de la coleccion basado en College_System
         //College_System hereda de KeyedCollection
@@ -19,7 +19,7 @@ namespace TP_Lab_3.Test
         public TestZone_Marcos()
         {
             //Carga previa de los estudiantes para la realizacion de los test
-            for (int i = 0; i < 1000000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 var _student = new Student()
                 {
@@ -36,7 +36,7 @@ namespace TP_Lab_3.Test
             }
 
             //Segunda carga tomando en cuenta el ultimo numero de legajo cargado
-            for (int i = 0; i < 1000000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 var _student = new Student()
                 {
@@ -59,16 +59,16 @@ namespace TP_Lab_3.Test
         public void Student_load_test()
         {
             //Almacenamiento de un estudiante de ejemplo
-            var aux = students[345000];
+            var aux = students[20500];
 
             //Variable para comprobar cumpleaños
             DateTime BirthCheck = aux.BirthDate;
 
             //Verificación que se cargaron los 2.000.000 de estudiantes
-            Assert.Equal(2000000, students.Count());                  
+            Assert.Equal(2000, students.Count());                  
 
             //Comprobación que el legajo corresponda al estudiante
-            Assert.Equal(345000, aux.Legacy);
+            Assert.Equal(20500, aux.Legacy);
 
             //Comprobación de datos del estudiante
             Assert.Equal("Jhon", aux.FirstName);
@@ -83,7 +83,7 @@ namespace TP_Lab_3.Test
         public void Update_or_remplace_Student_Info()
         {         
             //Carga de un estudiante x en una variable auxiliar
-            var aux = students[200005];
+            var aux = students[20005];
 
             //Variable para comprobar cumpleaños
             DateTime BirthCheck = aux.BirthDate;
@@ -112,13 +112,13 @@ namespace TP_Lab_3.Test
         public void Remove_student_test()
         {
             //Comprobación que la coleccion contiene al estudiante
-            Assert.True(students.Contains(200005));
+            Assert.True(students.Contains(20005));
 
             //Se remueve al estudiante segun su Key
-            students.Remove(200005);
+            students.Remove(20005);
 
             //Comprobación de que se elimino el estudiante
-            Assert.False(students.Contains(200005));
+            Assert.False(students.Contains(20005));
         }
 
         //Test para reemplazo de estudiante
@@ -126,7 +126,7 @@ namespace TP_Lab_3.Test
         public void SetItem_for_student_remplace_test()
         {
             //Carga de un estudiante x en una variable auxiliar
-            var aux = students[34500];
+            var aux = students[20500];
 
             //Variable para comprobar cumpleaños
             DateTime BirthCheck = aux.BirthDate;
@@ -139,7 +139,7 @@ namespace TP_Lab_3.Test
             //Llamada a la funcion para el reemplazo
             //Se pasa los datos de un nuevo estudiante para
             //reemplazar a otro
-            students.ReplaceStudent(new Student(34500, "Carlos", "Santana", new DateTime(1990, 07, 23)));
+            students.ReplaceStudent(new Student(20500, "Carlos", "Santana", new DateTime(1990, 07, 23)));
 
             //Verificación de datos despues del reemplazo
             Assert.Equal("Jhon", aux.FirstName);

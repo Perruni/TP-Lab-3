@@ -11,7 +11,7 @@ namespace TP_Lab_3.Test
 
     {  
         private College_System _sysacad = new College_System();
-    {
+
         
         public Sysacad_Tests()
         {
