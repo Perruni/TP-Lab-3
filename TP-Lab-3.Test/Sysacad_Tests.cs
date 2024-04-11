@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 namespace TP_Lab_3.Test
 {
     public class Sysacad_Tests
+
+    {  
+        private College_System _sysacad = new College_System();
     {
-        private readonly College_System _sysacad;
+        
         public Sysacad_Tests()
         {
             _sysacad = new College_System();
@@ -21,7 +24,6 @@ namespace TP_Lab_3.Test
 
             } while (legajos < 24000);
         }
-
 
 
 
